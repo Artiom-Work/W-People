@@ -1,0 +1,37 @@
+.logo {
+  @include flex-space-between;
+
+  column-gap: 30px;
+  max-width: clamp(260px, 24.4vw, 470px);
+  width: 100%;
+  background: var(--color-grad-1);
+  padding-inline: var(--indent-small) var(--indent);
+  padding-block: var(--indent-small);
+  border-radius: var(--border-radius-extra-large);
+
+  color: var(--color-light);
+  line-height: 0.9;
+
+  @include hover {
+    color: var(--color-light);
+    filter: brightness(90%);
+  }
+  @include active {
+    .logo__image {
+      scale: 0.9;
+    }
+  }
+
+  @include mobile-s-media {
+    max-width: 210px;
+  }
+  &__image {
+    @include square(clamp(44px, 5.2vw, 100px));
+
+    transition-duration: var(--transition-duration);
+  }
+  &__text {
+    max-width: clamp(150px, 12.5vw, 240px);
+    width: 100%;
+  }
+}

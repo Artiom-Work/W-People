@@ -1,0 +1,42 @@
+.block-line {
+  width: 100%;
+  height: var(--indent-extra-big);
+  background: var(--color-grad-2);
+}
+
+.round-icon {
+  &-wrapper {
+    @include square(clamp(44px, 2.8vw, 54px));
+    @include flex-center(true);
+
+    background: var(--color-grad-2);
+    border-radius: 50%;
+  }
+}
+//
+// .decor-image {
+//   width: clamp(44px, 4.58vw, 88px);
+//   height: clamp(55px, 5.7vw, 111px);
+// }
+
+.accent-text {
+  &--bold {
+    font-weight: 700;
+  }
+  &--capital {
+    font-family: var(--font-family-accent-alt);
+    color: var(--color-accent-ye-bright);
+    font-size: 0.8em;
+    font-weight: 500;
+
+    &-logo {
+      display: block;
+      text-align: end;
+      margin-top: -15px;
+
+      @include mobile-s-media {
+        margin-top: -3px;
+      }
+    }
+  }
+}
