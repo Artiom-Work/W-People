@@ -1,15 +1,15 @@
 .logo {
   @include flex-space-between;
 
-  column-gap: 30px;
-  max-width: clamp(260px, 24.4vw, 470px);
+  font-weight: 500;
+  column-gap: 10px;
+  max-width: clamp(210px, 24.4vw, 470px);
   width: 100%;
   background: var(--color-grad-1);
-  padding-inline: var(--indent-small) var(--indent);
-  padding-block: var(--indent-small);
-  border-radius: var(--border-radius-extra-large);
+  padding-inline: var(--indentSmall) var(--indent);
+  padding-block: var(--indentSmall);
+  border-radius: var(--border-radius-large);
 
-  color: var(--color-light);
   line-height: 0.9;
 
   @include hover {
@@ -22,16 +22,9 @@
     }
   }
 
-  @include mobile-s-media {
-    max-width: 210px;
-  }
   &__image {
     @include square(clamp(44px, 5.2vw, 100px));
 
     transition-duration: var(--transition-duration);
-  }
-  &__text {
-    max-width: clamp(150px, 12.5vw, 240px);
-    width: 100%;
   }
 }

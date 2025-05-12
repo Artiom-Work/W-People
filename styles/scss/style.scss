@@ -7,127 +7,27 @@
 @import "./base/_utils.scss";
 @import "./base/_globals.scss";
 //blocks
-// @import "./blocks/_preloader.scss";
-@import "./blocks/_decor-elements.scss";
-// @import "./blocks/_table.scss";
+@import "./blocks/_preloader.scss";
 @import "./blocks/_logo.scss";
 @import "./blocks/_header.scss";
-// @import "./blocks/_menu.scss";
-// @import "./blocks/_section.scss";
-// @import "./blocks/_calc-table.scss";
-
-// ===========================================//
-//--------======= old-blocks ==========---------//
-// @import "./blocks/_about.scss";
-// //aside
-// @import "./blocks/_metrics-list.scss";
-// @import "./blocks/_referral-system.scss";
-// @import "./blocks/_who-uses.scss";
-// //end-aside
-// @import "./blocks/_global-statistic.scss";
-// @import "./blocks/_originality.scss";
-// @import "./blocks/_numbers.scss";
-// @import "./blocks/_forecast.scss";
-// @import "./blocks/_invest-indicators.scss";
-// @import "./blocks/_preview-galery.scss";
-// ===========================================//
+@import "./blocks/_menu.scss";
+@import "./blocks/_section.scss";
+@import "./blocks/_about.scss";
+//aside
+@import "./blocks/_metrics-list.scss";
+@import "./blocks/_referral-system.scss";
+@import "./blocks/_who-uses.scss";
+//end-aside
+@import "./blocks/_global-statistic.scss";
+@import "./blocks/_table.scss";
+@import "./blocks/_calc-table.scss";
+@import "./blocks/_originality.scss";
+@import "./blocks/_numbers.scss";
+@import "./blocks/_forecast.scss";
+@import "./blocks/_invest-indicators.scss";
+@import "./blocks/_preview-galery.scss";
 // styles for the last block with the platform description
-// @import "./blocks/_platform-description.scss";
-// @import "./blocks/_block-text.scss";
-// @import "./blocks/_сommunication-methods.scss";
-// @import "./blocks/_method.scss";
-
-.hello {
-  @include fluid-text(40, 35);
-  font-weight: 800;
-  font-family: var(--font-family-accent);
-}
-.container {
-  // outline: 1px solid red;
-
-  &__box {
-    max-width: 600px;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-}
-.preview__image {
-  &-link {
-    @include active {
-      scale: 1.02;
-    }
-  }
-}
-.text {
-  @include fluid-text(36, 16);
-
-  font-family: var(--font-family-accent);
-  font-weight: 500;
-}
-.test-color-group {
-  @include flex-space-between;
-  flex-wrap: wrap;
-  gap: 25px;
-  font-family: var(--font-family-accent);
-  color: var(--color-light);
-  max-width: 1000;
-  width: 100%;
-  margin: 0 0 20px 0;
-}
-.test-color-1 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-accent);
-  text-align: center;
-}
-.test-color-2 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-accent-light);
-  text-align: center;
-}
-.test-color-3 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-grad-1);
-  text-align: center;
-}
-.test-color-4 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-grad-2);
-  text-align: center;
-}
-.test-color-5 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-grad-3);
-  text-align: center;
-}
-.test-color-6 {
-  @include flex-center(true);
-  @include fluid-text(24, 16);
-
-  width: 150px;
-  aspect-ratio: 1;
-  background: var(--color-grad-4);
-  text-align: center;
-}
+@import "./blocks/_platform-description.scss";
+@import "./blocks/_block-text.scss";
+@import "./blocks/_сommunication-methods.scss";
+@import "./blocks/_method.scss";

@@ -1,4 +1,32 @@
 @font-face {
+  font-family: "Futura";
+  src: url("../../fonts/futura-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../../fonts/futura-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura book medium";
+  src: url("../../fonts/futura-book-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura book light";
+  src: url("../../fonts/futura-book-light.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Inter";
   src: url("../../fonts/Inter-ExtraBold.woff2") format("woff2");
   font-weight: 800;
@@ -53,34 +81,5 @@
   src: url("../../fonts/Roboto-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spectral";
-  src: url("../../fonts/Spectral-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spectral";
-  src: url("../../fonts/Spectral-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Spectral";
-  src: url("../../fonts/Spectral-ExtraBoldItalic.woff2") format("woff2");
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "BethEllen";
-  src: url("../../fonts/BethEllen-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
   font-display: swap;
 }

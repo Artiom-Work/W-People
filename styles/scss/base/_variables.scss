@@ -1,54 +1,54 @@
 :root {
   --color-dark: #191a23;
   --color-light: #ffffff;
+  --color-gray: #edf8f2;
+  --color-gray-light: #efefef;
+  --color-gray-medium: #e6e6e6;
   --color-gray-dark: #bfbfbf;
-
-  --color-accent: #6155bf;
-  --color-accent-light: #81b8fc;
-  --color-accent-ye: #ffe598;
-  --color-accent-ye-bright: #f4db00;
-  --color-accent-red: #ff0000;
-  --color-accent-p: #f3cccc;
-  --color-accent-g: #00e9a8;
-  --color-accent-g-light: #ddffec;
-  --color-accent-b: #0094ff;
-
   --color-gray-table-border: #c7c7c7;
-
-  --color-grad-1: linear-gradient(90deg, #6155bf 0%, #81b8fc 100%);
-  --color-grad-2: linear-gradient(70deg, #81b8fc 0%, #6155bf 100%);
-  --color-grad-3: linear-gradient(188deg, #cdc8ff 0%, #9488fd 100%);
-  --color-grad-4: linear-gradient(188deg, #6155bf 0%, #9488fd 100%);
-  --color-grad-5: linear-gradient(
+  --color-gray-icon: #d2d2d2;
+  --color-yellow: #ffe598;
+  --color-red: #ff0000;
+  --color-pink: #f3cccc;
+  --color-green: #00e9a8;
+  --color-green-light: #a3e9c3;
+  --color-green-extra-light: #ddffec;
+  --color-green-dark: #34a753;
+  --color-blue: #0094ff;
+  --color-violet: #400478;
+  --color-grad-1: linear-gradient(90deg, #598be9 0%, #b8f1c0 100%);
+  --color-grad-2: linear-gradient(70deg, #b8f1c0 0%, #598be9 100%);
+  --color-grad-3: linear-gradient(201deg, #598be96a 0%, #b8f1bf7e 100%);
+  --color-grad-4: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.05) 0%,
     rgba(255, 255, 255, 0.525) 100%
   );
+  --color-grad-5: linear-gradient(226deg, #fff 0%, #598be9 100%);
 
-  --border-radius-small-extra: 5px;
-  --border-radius-small: 10px;
+  --border-radius-small: 5px;
+  --border-radius-table: 10px;
   --border-radius: 30px;
   --border-radius-medium: 38px;
-  --border-radius-large: 50px;
-  --border-radius-extra-large: 91px;
+  --border-radius-large: 93px;
 
   --box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
   --box-shadow-2: 0 -2px 10px rgba(0, 0, 0, 0.05);
   --box-shadow-3: 0 -1px 9px rgba(0, 0, 0, 0.3);
 
-  --font-family-base: "Roboto", sans-serif;
+  --font-family-base: "Futura", sans-serif;
+  --font-family-base-accent-light: "Futura book light", sans-serif;
   --font-family-second: "Inter", sans-serif;
-  --font-family-accent: "Spectral", sans-serif;
-  --font-family-accent-alt: "BethEllen", sans-serif;
+  --font-family-alternate: "Roboto", sans-serif;
 
   --container-width: 1880px;
-  --container-padding-x: 20px;
   --menuHeight: 100px;
+  --container-padding-x: 20px;
+  --whoUsesMagrinTopMobile: 250px;
 
-  --indent-small: clamp(12.5px, 1.25vw, 25px);
+  --indentSmall: clamp(12.5px, 1.25vw, 25px);
   --indent: clamp(25px, 2.5vw, 50px);
-  --indent-big: clamp(40px, 3.9vw, 75px);
-  --indent-extra-big: clamp(60px, 5.2vw, 100px);
+  --indentBig: clamp(40px, 3.9vw, 75px);
 
   --transition-duration: 0.3s;
 
