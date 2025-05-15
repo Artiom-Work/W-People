@@ -59,6 +59,7 @@
   }
 
   &__text {
+    position: relative;
     padding-inline: var(--indentSmall);
 
     &:not(:last-child) {
@@ -127,35 +128,35 @@
 }
 // Styles for decor
 .block-text {
-  &__text {
-    p {
-      position: relative;
-    }
+  // &__text {
+  //   p {
+  //     position: relative;
+  //   }
 
-    & p:nth-child(4n) {
-      position: relative;
-      &::after {
-        @include decor-circle-small;
-        @include decor-position-top-left;
+  //   & p:nth-child(4n) {
+  //     position: relative;
+  //     &::after {
+  //       @include decor-circle-small;
+  //       @include decor-position-top-left;
 
-        translate: 170px -50%;
-      }
-    }
-    & p:nth-child(4n + 3) {
-      position: relative;
-      &::after {
-        @include decor-circle-color-big;
-        @include decor-position-bottom-left;
-      }
-    }
-    & p:nth-child(5n) {
-      position: relative;
-      &::before {
-        @include decor-circle-big;
-        @include decor-position-center;
-      }
-    }
-  }
+  //       translate: 170px -50%;
+  //     }
+  //   }
+  //   & p:nth-child(4n + 3) {
+  //     position: relative;
+  //     &::after {
+  //       @include decor-circle-color-big;
+  //       @include decor-position-bottom-left;
+  //     }
+  //   }
+  //   & p:nth-child(5n) {
+  //     position: relative;
+  //     &::before {
+  //       @include decor-circle-big;
+  //       @include decor-position-center;
+  //     }
+  //   }
+  // }
 
   &__table {
     thead {
@@ -203,15 +204,26 @@
       @include decor-circle-color-big;
     }
     &--small {
+      @include decor-circle-color-small;
+    }
+    &--big-color {
+      @include decor-circle-big(true);
+    }
+    &--medium-color {
+      @include decor-circle-big;
+    }
+    &--small-color {
       @include decor-circle-small;
     }
 
     &--right {
+      top: 0;
       right: 0;
       translate: -100% 0;
     }
 
     &--left {
+      top: 0;
       left: 0;
       translate: 100% 0;
     }
@@ -220,5 +232,9 @@
       left: 50%;
       translate: -50% -50%;
     }
+  }
+  ul,
+  li {
+    position: relative;
   }
 }

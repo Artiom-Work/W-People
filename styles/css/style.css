@@ -2188,6 +2188,7 @@ h5,
   background: var(--color-grad-5);
 }
 .block-text__text {
+  position: relative;
   padding-inline: var(--indentSmall);
 }
 .block-text__text:not(:last-child) {
@@ -2249,53 +2250,6 @@ h5,
   margin-block: 0 var(--indentSmall);
 }
 
-.block-text__text p {
-  position: relative;
-}
-.block-text__text p:nth-child(4n) {
-  position: relative;
-}
-.block-text__text p:nth-child(4n)::after {
-  width: clamp(40px, 5.3vw, 102px);
-  height: clamp(40px, 5.3vw, 102px);
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  background: var(--color-grad-5);
-  z-index: -1;
-  top: 25px;
-  left: 25px;
-  translate: 170px -50%;
-}
-.block-text__text p:nth-child(4n+3) {
-  position: relative;
-}
-.block-text__text p:nth-child(4n+3)::after {
-  width: clamp(75px, 10.42vw, 200px);
-  height: clamp(75px, 10.42vw, 200px);
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  background: var(--color-grad-3);
-  z-index: -1;
-  bottom: 25px;
-  left: 25px;
-}
-.block-text__text p:nth-child(5n) {
-  position: relative;
-}
-.block-text__text p:nth-child(5n)::before {
-  width: clamp(75px, 10.42vw, 200px);
-  height: clamp(75px, 10.42vw, 200px);
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  background: var(--color-grad-5);
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-}
 .block-text__table thead {
   position: relative;
 }
@@ -2397,14 +2351,43 @@ h5,
   position: absolute;
   content: "";
   border-radius: 50%;
+  background: var(--color-grad-3);
+  z-index: -1;
+}
+.block-text__decor-circle--big-color {
+  width: clamp(100px, 13vw, 250px);
+  height: clamp(100px, 13vw, 250px);
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background: var(--color-grad-5);
+  z-index: -1;
+}
+.block-text__decor-circle--medium-color {
+  width: clamp(75px, 10.42vw, 200px);
+  height: clamp(75px, 10.42vw, 200px);
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background: var(--color-grad-5);
+  z-index: -1;
+}
+.block-text__decor-circle--small-color {
+  width: clamp(40px, 5.3vw, 102px);
+  height: clamp(40px, 5.3vw, 102px);
+  position: absolute;
+  content: "";
+  border-radius: 50%;
   background: var(--color-grad-5);
   z-index: -1;
 }
 .block-text__decor-circle--right {
+  top: 0;
   right: 0;
   translate: -100% 0;
 }
 .block-text__decor-circle--left {
+  top: 0;
   left: 0;
   translate: 100% 0;
 }
@@ -2412,6 +2395,10 @@ h5,
   top: 0;
   left: 50%;
   translate: -50% -50%;
+}
+.block-text ul,
+.block-text li {
+  position: relative;
 }
 
 .сommunication-methods {
