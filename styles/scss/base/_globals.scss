@@ -106,7 +106,13 @@ h5,
     letter-spacing: -0.04em;
   }
 }
-
+.small-divider {
+  width: 40vw;
+  margin-right: auto;
+  margin-left: 0;
+  border: 3px solid #598be9;
+  border-radius: var(--border-radius-small);
+}
 .decor-image {
   width: clamp(44px, 4.58vw, 88px);
   height: clamp(55px, 5.7vw, 111px);

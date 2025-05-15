@@ -1,5 +1,6 @@
 .block-text {
   padding-block: var(--indent);
+  position: relative;
 
   &--padding-bottom {
     padding-block: var(--indent) 0;
@@ -126,8 +127,6 @@
 }
 // Styles for decor
 .block-text {
-  position: relative;
-
   &__text {
     p {
       position: relative;
@@ -147,8 +146,6 @@
       &::after {
         @include decor-circle-color-big;
         @include decor-position-bottom-left;
-
-        // translate: 170px -50%;
       }
     }
     & p:nth-child(5n) {
@@ -198,58 +195,30 @@
       @include decor-position-bottom-right;
     }
   }
-  ul,
-  ol {
-    li {
-      position: relative;
+  &__decor-circle {
+    &--big {
+      @include decor-circle-color-big(true);
     }
-    li:nth-child(4n) {
-      &::before {
-        @include decor-circle-small(true);
-        @include decor-position-bottom-left;
-      }
+    &--medium {
+      @include decor-circle-color-big;
     }
-    li:nth-child(5n) {
-      &::before {
-        @include decor-circle-small;
-        @include decor-position-top-left;
+    &--small {
+      @include decor-circle-small;
+    }
 
-        translate: 140px -50%;
-      }
+    &--right {
+      right: 0;
+      translate: -100% 0;
     }
-  }
-  ul {
-    li:nth-child(7n + 4) {
-      &::before {
-        @include decor-circle-color-big(true);
-        @include decor-position-bottom-left;
 
-        // translate: 100% 0;
-      }
+    &--left {
+      left: 0;
+      translate: 100% 0;
     }
-    li:nth-child(8n + 1) {
-      &::after {
-        @include decor-circle-small;
-        @include decor-position-center;
-
-        translate: -100% 0;
-      }
-    }
-    li:nth-child(8n + 5) {
-      &::after {
-        @include decor-circle-big;
-        @include decor-position-center;
-
-        translate: 100% 0;
-      }
-    }
-    li:nth-child(4n + 3) {
-      &::after {
-        @include decor-circle-small(true);
-        @include decor-position-bottom-right;
-
-        translate: -50% 50%;
-      }
+    &--center {
+      top: 0;
+      left: 50%;
+      translate: -50% -50%;
     }
   }
 }
