@@ -2132,6 +2132,9 @@ h5,
 .block-text--padding-block {
   padding-block: 0;
 }
+.block-text--padding-small {
+  padding-block: var(--indentSmall);
+}
 .block-text__title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2216,11 +2219,16 @@ h5,
 }
 .block-text__table th {
   padding: 0 clamp(2px, 0.67vw, 10px) clamp(2px, 0.67vw, 10px);
+  font-weight: 900;
 }
 .block-text__table td {
-  vertical-align: text-top;
+  vertical-align: middle;
   text-align: center;
   padding: 0 clamp(2px, 0.67vw, 10px) clamp(2px, 0.67vw, 10px);
+  border-bottom: 3px solid var(--color-gray-table-border);
+}
+.block-text__table td:not(:last-child) {
+  border-right: 3px solid var(--color-gray-table-border);
 }
 @media (max-width: 480px) {
   .block-text__table {
@@ -2270,7 +2278,7 @@ h5,
   position: absolute;
   content: "";
   border-radius: 50%;
-  background: var(--color-grad-5);
+  background: var(--color-grad-3);
   z-index: -1;
   top: 25px;
   left: 25px;
@@ -2284,14 +2292,14 @@ h5,
   position: absolute;
   content: "";
   border-radius: 50%;
-  background: var(--color-grad-5);
+  background: var(--color-grad-3);
   z-index: -1;
   bottom: 25px;
   left: 25px;
 }
 .block-text__table tbody::after {
-  width: clamp(100px, 13vw, 250px);
-  height: clamp(100px, 13vw, 250px);
+  width: clamp(75px, 10.42vw, 200px);
+  height: clamp(75px, 10.42vw, 200px);
   position: absolute;
   content: "";
   border-radius: 50%;

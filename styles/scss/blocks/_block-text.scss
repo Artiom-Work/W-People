@@ -9,7 +9,9 @@
   &--padding-block {
     padding-block: 0;
   }
-
+  &--padding-small {
+    padding-block: var(--indentSmall);
+  }
   &__title {
     display: inline-flex;
     font-weight: 700;
@@ -92,12 +94,18 @@
 
     th {
       padding: 0 clamp(2px, 0.67vw, 10px) clamp(2px, 0.67vw, 10px);
+      font-weight: 900;
     }
 
     td {
-      vertical-align: text-top;
+      vertical-align: middle;
       text-align: center;
       padding: 0 clamp(2px, 0.67vw, 10px) clamp(2px, 0.67vw, 10px);
+
+      border-bottom: 3px solid var(--color-gray-table-border);
+      &:not(:last-child) {
+        border-right: 3px solid var(--color-gray-table-border);
+      }
     }
     @include mobile-s-media {
       margin-inline: calc(var(--container-padding-x) * -1);
@@ -166,18 +174,18 @@
         @include decor-position-top-right;
       }
       &::after {
-        @include decor-circle-big;
+        @include decor-circle-color-big;
         @include decor-position-top-left;
       }
     }
     tbody {
       position: relative;
       &::before {
-        @include decor-circle-small;
+        @include decor-circle-color-small;
         @include decor-position-bottom-left;
       }
       &::after {
-        @include decor-circle-big(true);
+        @include decor-circle-big;
         @include decor-position-center;
       }
     }
