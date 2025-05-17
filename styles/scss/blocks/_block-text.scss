@@ -50,6 +50,9 @@
       border-radius: 50%;
       left: 0;
     }
+    &.h5::before {
+      @include square(clamp(28px, 2.8vw, 54px));
+    }
 
     &--small {
       &::before {
@@ -57,6 +60,10 @@
 
         background: var(--color-grad-5);
       }
+    }
+
+    &--center {
+      justify-content: center;
     }
   }
 
@@ -67,12 +74,27 @@
     &:not(:last-child) {
       margin-block: 0 var(--indent);
     }
+    p:not(:last-child) {
+      margin-block: 0 var(--indent);
+    }
+    &--not-indent {
+      margin-block: 0 !important;
+    }
+
+    @include mobile-media {
+      font-size: 15px;
+      padding-inline: 0;
+    }
   }
 
   &__decor-devider {
     height: clamp(12.5px, 1.25vw, 25px);
     margin-block: 0 var(--indent);
     border-radius: var(--border-radius-small);
+
+    &--not-indent {
+      margin-block: 0;
+    }
   }
 
   &__table-box {
@@ -82,6 +104,11 @@
     padding-block: var(--indent);
     margin-block: var(--indent);
     border-radius: var(--border-radius);
+
+    @include mobile-s-media {
+      padding-block: var(--indentSmall);
+      padding-inline: var(--indentSmall);
+    }
   }
 
   &__table {
@@ -132,40 +159,19 @@
     li:not(:last-child) {
       margin-block: 0 var(--indentSmall);
     }
+
+    @include mobile-media {
+      font-size: 15px;
+      padding-inline: var(--indent);
+    }
+    @include mobile-s-media {
+      font-size: 14px;
+      padding-inline: 0;
+    }
   }
 }
 // Styles for decor
 .block-text {
-  // &__text {
-  //   p {
-  //     position: relative;
-  //   }
-
-  //   & p:nth-child(4n) {
-  //     position: relative;
-  //     &::after {
-  //       @include decor-circle-small;
-  //       @include decor-position-top-left;
-
-  //       translate: 170px -50%;
-  //     }
-  //   }
-  //   & p:nth-child(4n + 3) {
-  //     position: relative;
-  //     &::after {
-  //       @include decor-circle-color-big;
-  //       @include decor-position-bottom-left;
-  //     }
-  //   }
-  //   & p:nth-child(5n) {
-  //     position: relative;
-  //     &::before {
-  //       @include decor-circle-big;
-  //       @include decor-position-center;
-  //     }
-  //   }
-  // }
-
   &__table {
     thead {
       position: relative;
@@ -204,6 +210,7 @@
       @include decor-position-bottom-right;
     }
   }
+
   &__decor-circle {
     &--big {
       @include decor-circle-color-big(true);
@@ -241,6 +248,7 @@
       translate: -50% -50%;
     }
   }
+
   ul,
   li {
     position: relative;

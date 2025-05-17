@@ -74,11 +74,11 @@ h2,
 }
 h3,
 .h3 {
-  @include fluid-text(50, 30);
+  @include fluid-text(50, 24);
 }
 h4,
 .h4 {
-  @include fluid-text(40, 20);
+  @include fluid-text(40, 18);
 }
 h5,
 .h5 {
@@ -110,8 +110,16 @@ h5,
   width: 40vw;
   margin-right: auto;
   margin-left: 0;
-  border: 3px solid #598be9;
+  border: 3px solid var(--color-blue-light);
   border-radius: var(--border-radius-small);
+
+  &--center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &--bottom-indent {
+    margin-bottom: var(--indent);
+  }
 }
 .decor-image {
   width: clamp(44px, 4.58vw, 88px);
