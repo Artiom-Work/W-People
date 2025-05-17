@@ -99,11 +99,15 @@
     letter-spacing: 0;
     line-height: 1.1;
 
-    @media (max-width: 1000px) {
-      max-width: clamp(300px, 43vw, 450px);
+    @include tablet-media {
+      max-width: clamp(300px, 43vw, 550px);
     }
+
     @include mobile-media {
       max-width: unset;
+    }
+    &--long {
+      max-width: 100%;
     }
     p {
       --paragraphMarginBottom: 5px;
@@ -111,9 +115,11 @@
     .accent-text {
       white-space: nowrap;
     }
+
     &-list {
       list-style: disc;
     }
+
     &-item {
       margin-inline: clamp(25px, 2.2vw, 38px) 0;
 
@@ -129,7 +135,8 @@
     padding-inline: clamp(10px, 4.8vw, 92px);
 
     @include mobile-s-media {
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: 700;
     }
     &::before {
       @include square(clamp(96px, 15.1vw, 290px));
@@ -141,6 +148,12 @@
       left: 0;
       top: calc(clamp(20px, 2.76vw, 53px) * -1);
       z-index: -1;
+
+      @include mobile-s-media {
+        width: 50px;
+        left: 1.4vw;
+        top: -10px;
+      }
     }
     &::after {
       position: absolute;

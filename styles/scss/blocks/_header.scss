@@ -17,6 +17,12 @@
   &__text {
     white-space: nowrap;
 
+    &--accent {
+      font-weight: 700;
+    }
+    @include mobile-media {
+      font-size: 16px;
+    }
     @include mobile-s-media {
       display: none;
     }
