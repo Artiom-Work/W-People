@@ -1097,14 +1097,10 @@ h5,
 }
 .global-statistic__text {
   font-size: clamp(20px, 1.6666666667vw, 32px);
+  max-width: clamp(300px, 50vw, 1060px);
   font-family: var(--font-family-base-accent-light);
   letter-spacing: 0;
   line-height: 1.1;
-}
-@media (max-width: 1280px) {
-  .global-statistic__text {
-    max-width: clamp(300px, 43vw, 550px);
-  }
 }
 @media (max-width: 767px) {
   .global-statistic__text {

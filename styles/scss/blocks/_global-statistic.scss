@@ -95,13 +95,10 @@
   &__text {
     @include fluid-text(32, 20);
 
+    max-width: clamp(300px, 50vw, 1060px);
     font-family: var(--font-family-base-accent-light);
     letter-spacing: 0;
     line-height: 1.1;
-
-    @include tablet-media {
-      max-width: clamp(300px, 43vw, 550px);
-    }
 
     @include mobile-media {
       max-width: unset;
