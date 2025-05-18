@@ -9,6 +9,37 @@ const creatingTablesFormInput = document.getElementById('create-tables-password'
 const passwordToSeeNumbers = 12345678;
 let mutationObserver;
 
+
+
+
+
+
+
+const overlay = document.querySelector('.viewport-overlay');
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+	// Если оверлей сейчас не в состоянии fade-in, запускаем анимацию появления
+	if (!overlay.classList.contains('fade-in')) {
+		overlay.classList.remove('fade-out');
+		overlay.classList.add('fade-in');
+	}
+
+	clearTimeout(scrollTimeout);
+
+	// Запускаем анимацию исчезновения через 400 мс после окончания скролла
+	scrollTimeout = setTimeout(() => {
+		overlay.classList.remove('fade-in');
+		overlay.classList.add('fade-out');
+	}, 400);
+});
+
+
+
+
+
+
+
 // Code for graph in the block who-uses
 
 const GRAPH_CONFIG = {

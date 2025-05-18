@@ -29,3 +29,77 @@
 // styles for the last block with the platform description
 @import "./blocks/_platform-description.scss";
 @import "./blocks/_block-text.scss";
+// .lazy-load {
+//   display: block !important;
+// }
+.viewport-overlay {
+  position: fixed; /* фиксируем поверх всего окна */
+  bottom: var(--menuHeight);
+  left: 0; //удалить потом
+  width: 100vw; /* ширина viewport */
+  height: calc(100vh - var(--menuHeight)); /* высота viewport */
+  // background: rgba(255, 255, 255, 0.7); /* светлый полупрозрачный фон */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 26%,
+    rgb(255, 255, 255)
+  );
+  // background: transparent;
+  backdrop-filter: blur(0px);
+  pointer-events: none; /* чтобы клики проходили сквозь оверлей */
+  opacity: 0;
+  visibility: hidden;
+  // transition: opacity 0.5s ease;
+  z-index: 9999; /* поверх всего контента */
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: inherit; /* или задать фон страницы */
+  //   filter: blur(10px);
+  //   z-index: -1;
+  // }
+}
+
+/* Анимация плавного появления */
+@keyframes fadeIn {
+  from {
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Анимация плавного исчезновения */
+@keyframes fadeOut {
+  from {
+    backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Класс для запуска анимации появления */
+.viewport-overlay.fade-in {
+  animation: fadeIn 0.2s forwards;
+  visibility: visible;
+}
+
+/* Класс для запуска анимации исчезновения */
+.viewport-overlay.fade-out {
+  animation: fadeOut 0.5s forwards;
+}

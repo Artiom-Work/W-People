@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -2500,4 +2501,91 @@ h5,
 .block-text ul,
 .block-text li {
   position: relative;
+}
+
+.viewport-overlay {
+  position: fixed; /* фиксируем поверх всего окна */
+  bottom: var(--menuHeight);
+  left: 0;
+  width: 100vw; /* ширина viewport */
+  height: calc(100vh - var(--menuHeight)); /* высота viewport */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26%, rgba(255, 255, 255, 0.5)), to(rgb(255, 255, 255)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 26%, rgb(255, 255, 255));
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  pointer-events: none; /* чтобы клики проходили сквозь оверлей */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999; /* поверх всего контента */
+}
+
+/* Анимация плавного появления */
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fadeIn {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* Анимация плавного исчезновения */
+@-webkit-keyframes fadeOut {
+  from {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  from {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Класс для запуска анимации появления */
+.viewport-overlay.fade-in {
+  -webkit-animation: fadeIn 0.2s forwards;
+          animation: fadeIn 0.2s forwards;
+  visibility: visible;
+}
+
+/* Класс для запуска анимации исчезновения */
+.viewport-overlay.fade-out {
+  -webkit-animation: fadeOut 0.5s forwards;
+          animation: fadeOut 0.5s forwards;
 }/*# sourceMappingURL=style.css.map */
