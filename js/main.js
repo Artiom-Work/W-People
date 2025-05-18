@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
 		} else if (direction === 'up') {
 			overlay.classList.add('fade-out-top');
 		}
-	}, 700);
+	}, 450);
 });
 
 
